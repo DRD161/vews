@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <v-app-bar app color="blue darken-2" class="white--text">
+      <v-app-bar-nav-icon
+        @click="drawer = !drawer"
+        color="white"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>Vuesy</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -11,26 +14,23 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2 white--text">News + Vue = Vuesy!</span>
       </v-btn>
     </v-app-bar>
-
-    <v-content>
-      <HelloWorld />
-    </v-content>
+    <SideNav :drawer="drawer" />
+    <v-content> </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
+import SideNav from "./components/SideNav";
 export default {
   name: "App",
   components: {
-    HelloWorld
+    SideNav
   },
   data: () => ({
-    //
+    drawer: false
   })
 };
 </script>
