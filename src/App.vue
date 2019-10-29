@@ -14,7 +14,7 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
-        <span class="mr-2 white--text">News + Vue = Vuesy!</span>
+        <span class="mr-2 white--text">News + Vue = Vews!</span>
       </v-btn>
     </v-app-bar>
     <SideNav :drawer="drawer" />
