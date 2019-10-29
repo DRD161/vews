@@ -1,4 +1,4 @@
-# vuesy
+# vews
 
 ## Project setup
 ```
