@@ -1,0 +1,9 @@
+Vuesy:
+    ☐ Build SideNav component @started(10-27-19 15:00)
+    ☐ Build MainContent component @started(10-29-19 22:58)
+    ☐ Build MainContent card to house image, read more button, social share icons, etc.
+    ☐ Add api data to SideNav (use News API)
+    ☐ Add AOS module for scroll animations
+
+API Needs:
+    ☐ Get endpoint(s) to gather title(title), image(urlToImage), description(content), source(source.name), author(author)
