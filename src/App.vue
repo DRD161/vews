@@ -18,7 +18,9 @@
       </v-btn>
     </v-app-bar>
     <SideNav :drawer="drawer" />
-    <v-content> </v-content>
+    <v-content>
+      <!-- Card component here -->
+    </v-content>
   </v-app>
 </template>
 
