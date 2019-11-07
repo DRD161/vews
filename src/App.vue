@@ -6,7 +6,7 @@
         color="white"
       ></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuesy</span>
+        <span>Vews</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -20,16 +20,19 @@
     <SideNav :drawer="drawer" />
     <v-content>
       <!-- Card component here -->
+      <Card />
     </v-content>
   </v-app>
 </template>
 
 <script>
 import SideNav from "./components/SideNav";
+import Card from "./components/Card";
 export default {
   name: "App",
   components: {
-    SideNav
+    SideNav,
+    Card
   },
   data: () => ({
     drawer: false
