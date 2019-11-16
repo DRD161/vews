@@ -7,7 +7,6 @@
 <script>
 export default {
   name: "SideNav",
-  props: ["drawer"],
-  data: () => {}
+  props: ["drawer"]
 };
 </script>
