@@ -10,7 +10,7 @@
         <span class="mr-2 white--text">News + Vue = Vews!</span>
       </v-btn>
     </v-app-bar>
-    <SideNav :drawer="drawer" :api_key="api_key" @selectSource="sourceSelected" />
+    <SideNav :drawer="drawer" :api_key="api_key" @sourceSelected="setSource" />
     <v-content>
       <Card :articles="articles" />
     </v-content>
@@ -33,6 +33,18 @@ export default {
     articles: [],
     errors: []
   }),
+  methods: {
+    setSource(source) {
+      axios
+        .get("https://newsapi.org/v2/sources" + source + "apiKey=api_key")
+        .then(response => {
+          this.articles = response.data.articles;
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    }
+  },
   created() {
     axios
       .get(

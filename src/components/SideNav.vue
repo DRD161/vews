@@ -1,9 +1,16 @@
 <template>
   <v-navigation-drawer fixed app v-model="drawer">
-    <v-list>
-      <v-list-item-group v-for="source in sources" :key="source.id">
-        <v-list-item>{{ source.name}}</v-list-item>
-      </v-list-item-group>
+    <v-list dense class="pt-3 white--text">
+      <v-list-item v-for="source in sources" :key="source.id" @click="selectSource(source.id)">
+        <!-- <v-list-item-action>
+          <v-avatar size="32px">
+            <img class="img-circle elevation-7 mb-1" :src="getImgUrl(source.id)" />
+          </v-avatar>
+        </v-list-item-action>-->
+        <v-list-item-content>
+          <v-list-item-title>{{ source.name }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -21,7 +28,7 @@ export default {
     errors: []
   }),
   methods: {
-    selectSource: source => {
+    selectSource(source) {
       this.$emit("sourceSelected", source);
     }
   },
