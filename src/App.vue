@@ -35,7 +35,7 @@ export default {
   },
   data: () => ({
     drawer: false,
-    api_key: "994f086feb9146ccaf706f3a9eca13ec",
+    api_key: "ENETR KEY HERE",
     articles: [],
     errors: []
   }),
