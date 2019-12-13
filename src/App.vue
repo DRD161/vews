@@ -33,7 +33,11 @@ export default {
   },
   data: () => ({
     drawer: false,
+<<<<<<< HEAD
     api_key: '994f086feb9146ccaf706f3a9eca13ec',
+=======
+    api_key: "ENETR KEY HERE",
+>>>>>>> dd74390d5cd18fce99186db2505b62598fdb2d52
     articles: [],
     errors: []
   }),
