@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 export default {
-  name: "SideNav",
+  name: 'SideNav',
   props: {
     drawer: Boolean,
     api_key: String
@@ -29,18 +29,18 @@ export default {
   }),
   methods: {
     getImgUrl(pic) {
-      return require("../assets/images/" + pic + ".png");
+      return require('../assets/images/' + pic + '.png');
     },
     selectSource(source) {
-      this.$emit("sourceSelected", source);
+      this.$emit('sourceSelected', source);
     },
     closeDrawer() {
-      this.$emit("sourceClicked", this.drawer);
+      this.$emit('sourceClicked', this.drawer);
     }
   },
   created() {
     axios
-      .get("https://newsapi.org/v2/sources?language=en&apiKey=" + this.api_key)
+      .get('https://newsapi.org/v2/sources?language=en&apiKey=' + this.api_key)
       .then(response => {
         this.sources = response.data.sources;
       });

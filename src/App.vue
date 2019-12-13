@@ -6,9 +6,7 @@
         <span>Vews</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2 white--text">News + Vue = Vews!</span>
-      </v-btn>
+      <span class="mr-2 white--text">News + Vue = Vews!</span>
     </v-app-bar>
     <SideNav
       :drawer="drawer"
@@ -24,18 +22,18 @@
 </template>
 
 <script>
-import axios from "axios";
-import SideNav from "./components/SideNav";
-import Card from "./components/Card";
+import axios from 'axios';
+import SideNav from './components/SideNav';
+import Card from './components/Card';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     SideNav,
     Card
   },
   data: () => ({
     drawer: false,
-    api_key: "994f086feb9146ccaf706f3a9eca13ec",
+    api_key: '994f086feb9146ccaf706f3a9eca13ec',
     articles: [],
     errors: []
   }),
@@ -43,9 +41,9 @@ export default {
     setSource(source) {
       axios
         .get(
-          "https://newsapi.org/v2/top-headlines?sources=" +
+          'https://newsapi.org/v2/top-headlines?sources=' +
             source +
-            "&apiKey=" +
+            '&apiKey=' +
             this.api_key
         )
         .then(response => {
@@ -62,11 +60,11 @@ export default {
   created() {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + this.api_key
+        'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.api_key
       )
       .then(response => {
         this.articles = response.data.articles;
-        console.log(response.data.articles);
+        // console.log(response.data.articles);
       })
       .catch(error => {
         this.errors.push(error);
